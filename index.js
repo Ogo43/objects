@@ -25,76 +25,72 @@ console.log(authorSemantic);
  */
 
 //Q2
-function InstagramPost1(handleOfAuthor, content, anImageLinkPostedByTheAuthorOfThePost, numberOfViews, numberOfLikes) {
-    return{
-        handleOfAuthor: handleOfAuthor,
-        content: content,
-        anImageLinkPostedByTheAuthorOfThePost: anImageLinkPostedByTheAuthorOfThePost,
-        numberOfViews: numberOfViews,
-        numberOfLikes: numberOfLikes,
-    }
-}
 
-const creatorWork = InstagramPost1("bibyonce", "What foundation color matches? 1, 2, 3, or 4?", "https://www.instagram.com/reel/Co-pR7GjKjv/?igshid=YmMyMTA2M2Y=",
+const bibyonce = new InstagramPost("bibyonce", "What foundation color matches? 1, 2, 3, or 4?", "https://www.instagram.com/reel/Co-pR7GjKjv/?igshid=YmMyMTA2M2Y=",
 134000, 7452);
 
-console.log(creatorWork);
+console.log(bibyonce);
+
+const nappy = new InstagramPost("nappystory", "New visualizer work for @skaydo_idif", "https://www.instagram.com/reel/CmpctQjIVMF/?igshid=YmMyMTA2M2Y=",
+843, 103);
+
+console.log(nappy);
 
 //A2
 /**
- * {
- * handleOfAuthor: 'bibyonce', 
- * content: 'What foundation color matches? 1, 2, 3, or 4?', 
- * anImageLinkPostedByTheAuthorOfThePost: 'https://www.instagram.com/reel/Co-pR7GjKjv/?igshid=YmMyMTA2M2Y=', 
- * numberOfViews: 134000, 
- * numberOfLikes: 7452
- * }
+ * InstagramPost {
+ * HandleOfAuthor: 'bibyonce',
+ * Content: 'What foundation color matches? 1, 2, 3, or 4?',
+ * AnImageLinkPostedByTheAuthorOfThePost: 'https://www.instagram.com/reel/Co-pR7GjKjv/?igshid=YmMyMTA2M2Y=',
+ * NumberOfViews: 134000,
+ * NumberOfLikes: 7452
+*}
  */
-
-const authorship = {
-        handleOfAuthor: "nappystory",
-        content: "New visualizer work for @skaydo_idif",
-        anImageLinkPostedByTheAuthorOfThePost: "https://www.instagram.com/reel/CmpctQjIVMF/?igshid=YmMyMTA2M2Y=",
-        numberOfViews: 843,
-        numberOfLikes: 103,
-}
-
-console.log(authorship);
 
 //A2b
 /**
- * {
- * handleOfAuthor: 'nappystory', 
- * content: 'New visualizer work for @skaydo_idif', 
- * anImageLinkPostedByTheAuthorOfThePost: 'https://www.instagram.com/reel/CmpctQjIVMF/?igshid=YmMyMTA2M2Y=', 
- * numberOfViews: 843, 
- * numberOfLikes: 103
- * }
- */
+ * InstagramPost {
+ * HandleOfAuthor: 'nappystory',
+ * Content: 'New visualizer work for @skaydo_idif',
+ * AnImageLinkPostedByTheAuthorOfThePost: 'https://www.instagram.com/reel/CmpctQjIVMF/?igshid=YmMyMTA2M2Y=',
+ * NumberOfViews: 843,
+ * NumberOfLikes: 103
+*}
+*/
 
 //Q3
 
-function createPerson() {
-    const person = {
-        name: 'Musa',
-        age: '19years old',
-        location: 'Lekki, Lagos State.'
+function createPerson(name, age, location) {
+    return {
+        name: name,
+        age: age,
+        location: location,
     };
-        person.createJambScore = {
-            eng : 70,
-            govt: 83,
-            lit: 82,
-            crk: 94,      
-    };
-
-    return person;
 }
 
-const person1 = createPerson();
+const musa = createPerson("Musa", "19years old", "Lekki, Lagos State");
+console.log(musa);
 
-console.log(person1);
+function createJambScore (eng, govt, lit, crk){
+    return{
+        eng: eng,
+        govt: govt,
+        lit: lit,
+        crk: crk,
+    };
+}
 
-//Answer: {name: 'Musa', age: '19years old', location: 'Lekki, Lagos State.', createJambScore: {eng : 70, govt: 83, lit: 82, crk: 94,}}
+musa.result = createJambScore(70, 83, 82, 94);
+console.log(musa);
+
+
+//Answer: { name: 'Musa', age: '19years old', location: 'Lagos State' }
+/**{
+    name: 'Musa',
+    age: '19years old',
+    location: 'Lagos State',
+    result: { eng: 70, govt: 83, lit: 82, crk: 94 }
+  }*/
 
 // Q4
 
